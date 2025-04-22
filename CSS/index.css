@@ -474,46 +474,63 @@ section {
     background-size: cover;
 }
 
-.foodheader{
+.foodheader {
     position: absolute;
-    top: 10%;
-    font-family: "welcome", sans-serif;
-    font-size: 60px;
-    color: white;
-    text-shadow: 
-    -0.8px -0.8px 0 #000000,
-     0.8px -0.8px 0 #000000,
-    -0.8px  0.8px 0 #000000,
-     0.8px  0.8px 0 #000000;
-    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #75370f;
+    font-size: 5rem;
+    text-shadow:
+    1.5px 1.5px 0 #ffffff,
+    1.5px 1.5px 0 #ffffff,
+    1.5px 1.5px 0 #ffffff,
+    1.5px 1.5px 0 #ffffff;
+    top: 80px;
 }
 
-.foodgallery{
+.foodgallery {
+    position: absolute;
+    top: 200px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+}
+
+.foodcontainer {
+    flex: 0 1 calc(25% - 25px);
+    box-sizing: border-box;
+    position: relative;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
     background: #75370f;
     border: solid 3px white;
 }
 
-.foodcontainer{
-    top: 12px;
-    flex: 0 1 calc(25% - 15px);
-    box-sizing: border-box;
-    position: relative;
-    padding: 10px;
+.foodcontainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.foodgallery img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
     border-radius: 5px;
 }
 
-.foodgallery img{
-    position: relative;
-    margin: 10px auto;
-    width: 300px;
-    height: auto;
-    display: block;
-}
-
-.foodgallery h1{
-    position: relative;
-    top: -20px;
+.foodname {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
